@@ -72,6 +72,7 @@ public class MultipartAutoConfiguration {
 	public StandardServletMultipartResolver multipartResolver() {
 		StandardServletMultipartResolver multipartResolver = new StandardServletMultipartResolver();
 		multipartResolver.setResolveLazily(this.multipartProperties.isResolveLazily());
+		multipartResolver.setStrictServletCompliance(this.multipartProperties.isStrictServletCompliance());
 		return multipartResolver;
 	}
 
