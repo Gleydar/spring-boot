@@ -78,6 +78,11 @@ public class MultipartProperties {
 	 * access.
 	 */
 	private boolean resolveLazily = false;
+	
+	/**
+	* Whether the standard servlet should handle only multipart/forms-data or all multipart requests
+	*/
+	private boolean strictServletCompliance = false;
 
 	public boolean getEnabled() {
 		return this.enabled;
@@ -125,6 +130,14 @@ public class MultipartProperties {
 
 	public void setResolveLazily(boolean resolveLazily) {
 		this.resolveLazily = resolveLazily;
+	}
+	
+	public boolean isStrictServletCompliance() {
+		return this.strictServletCompliance;
+	}
+	
+	public void setStrictServletCompliance(boolean strictServletCompliance) {
+		this.strictServletCompliance = strictServletCompliance;
 	}
 
 	/**
